@@ -28,8 +28,9 @@ app.use('/', kanjiDetailRoutes);
 app.use('/example', exampleDetail);
 
 
-// app.listen(PORT, ()=>{
-//     console.log(`Listening on ${PORT}`);
-// })
+app.listen(PORT, ()=>{
+    console.log(`Listening on ${PORT}`);
+})
 
-module.exports = app;
+export default app;
+// module.exports = app;
