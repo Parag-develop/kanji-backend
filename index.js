@@ -18,13 +18,13 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());    
 app.use(json());
 
-app.use(express.static(path.join(__dirname, '/dist'))); // Adjust 'dist' to your build directory
+// app.use(express.static(path.join(__dirname, '/dist'))); // Adjust 'dist' to your build directory
 
-console.log("Serving files from:", path.join(__dirname, '/dist'));
+// console.log("Serving files from:", path.join(__dirname, '/dist'));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/dist', 'index.html')); // Serve index.html for all other routes
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '/dist', 'index.html')); // Serve index.html for all other routes
+// });
 
 app.get('/', (req,res)=>{
     res.send({"message" : "hello"});
