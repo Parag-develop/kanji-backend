@@ -5,6 +5,11 @@ import kanjiRoutes from './Routes/kanjiRoutes.js';
 import kanjiDetailRoutes from './Routes/kanjiDetailRoutes.js';
 import exampleDetail from './Routes/exampleDetail.js'
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Get the current directory name
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 config();
 const app = express();
