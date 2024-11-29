@@ -1,13 +1,13 @@
 import express, { json } from 'express';
-const app = express();
 import cors from 'cors';
 import { config } from 'dotenv';
 import kanjiRoutes from './Routes/kanjiRoutes.js';
 import kanjiDetailRoutes from './Routes/kanjiDetailRoutes.js';
 import exampleDetail from './Routes/exampleDetail.js'
-const path = require('path');
+import path from 'path';
 
 config();
+const app = express();
 
 const PORT = process.env.PORT || 3000;
 
