@@ -21,6 +21,8 @@ app.use(json());
 
 app.use(express.static(path.join(__dirname, '../frontend/kanjifrontend/dist'))); // Adjust 'dist' to your build directory
 
+console.log("Serving files from:", path.join(__dirname, '../frontend/kanjifrontend/dist'));
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/kanjifrontend/dist', 'index.html')); // Serve index.html for all other routes
 });
